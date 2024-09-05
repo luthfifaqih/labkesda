@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing', ['title' => 'SIMANIS']);
+});
+
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('actionlogin', [AuthController::class, 'actionlogin'])->name('actionlogin');
+Route::get('register', [AuthController::class, 'register'])->name('register');
+Route::post('actionregister', [AuthController::class, 'actionregister'])->name('actionregister');
+
+Route::get('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('dashboard', [DashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 });
