@@ -176,14 +176,14 @@
                                 </div>
                                 <!--end::Submit button-->
                                 <!--begin::Sign up-->
-                                <div class="text-gray-500 text-center fw-semibold fs-6">Belum punya akun?
+                                {{-- <div class="text-gray-500 text-center fw-semibold fs-6">Belum punya akun?
                                     <a href="{{ route('register') }}" class="link-info">Buat akun</a>
                                 </div>
                                 <!--end::Sign up-->
                                 <!--begin::Example-->
                                 <hr class="mt-5 mb-5">
                                 <div class="text-gray-500 text-center fw-semibold fs-6">Belum Menerima Email Verifikasi?
-                                </div>
+                                </div> --}}
                                 <!--end::Example-->
                                 {{-- <div class="d-grid mb-10">
                                     <a href="{{ route('resend.email.form') }}" class="btn btn-primary">Kirim Ulang

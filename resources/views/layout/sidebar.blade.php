@@ -144,7 +144,7 @@
                 <!--begin:Menu item-->
                 <div class="menu-item" id="menuUploadPersyaratan">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="#">
+                    <a class="menu-link" href="{{ route('pendaftaran.index') }}">
                         <span class="menu-icon">
                             <i class="ki-duotone ki-document fs-2">
                                 <span class="path1"></span>
@@ -169,7 +169,7 @@
                                 <span class="path3"></span>
                             </i>
                         </span>
-                        <span class="menu-title">Riwayat Upload Persyaratan</span>
+                        <span class="menu-title">Riwayat Pendaftaran</span>
                     </a>
                     <!--end:Menu link-->
                 </div>
