@@ -61,7 +61,7 @@ class PendaftaranController extends Controller
             'users_id' => Auth::id(),
             'name' => $request->name,
             'tempat_lahir' => $request->tempat_lahir,
-            'alamat' => $request->alamatir,
+            'alamat' => $request->alamat,
             'status' => 'menunggu',
         ]);
         $pendaftaran->save();
@@ -79,7 +79,7 @@ class PendaftaranController extends Controller
     {
         $validate = $request->validate([
             'name' => 'required',
-            'tempat_lahir' => 'required' . $pendaftaran->id,
+            'tempat_lahir' => 'required',
             'alamat' => 'required',
         ]);
 
@@ -88,6 +88,6 @@ class PendaftaranController extends Controller
         $pendaftaran->alamat = $request->alamat;
         $pendaftaran->save();
 
-        return redirect()->route('users.index')->with('success', 'User updated successfully');
+        return redirect()->route('pendaftaran.index')->with('success', 'User updated successfully');
     }
 }

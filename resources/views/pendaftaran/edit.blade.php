@@ -8,8 +8,9 @@
                     <div class="card-body bg-white" style="border-radius: 5px">
                         <!--begin::Form-->
                         <form id="kt_docs_formvalidation_text" class="form"
-                            action="{{ route('pendaftaran.update', $user->id) }}" autocomplete="off" method="POST">
+                            action="{{ url('pendaftaran', $pendaftaran->id) }}" autocomplete="off" method="POST">
                             @csrf
+                            @method('PUT')
                             <!--begin::Input group-->
                             <div class="fv-row mb-10">
                                 <!--begin::Label-->

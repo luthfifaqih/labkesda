@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-body bg-white" style="border-radius: 5px">
                         <!--begin::Form-->
-                        <form id="kt_docs_formvalidation_text" class="form" action="{{ route('pendaftaran.update') }}"
+                        <form id="kt_docs_formvalidation_text" class="form" action="{{ url('pendaftaran') }}"
                             autocomplete="off" method="POST">
                             @csrf
                             <!--begin::Input group-->
@@ -42,7 +42,7 @@
 
                                 <!--begin::Input-->
                                 <input type="text" name="alamat" class="form-control form-control-solid mb-3 mb-lg-0"
-                                    placeholder="Masukan Alamat" value="" />
+                                    placeholder="Masukan Alamat" />
                                 <!--end::Input-->
                             </div>
                             <!--end::Input group-->
